@@ -60,7 +60,6 @@ try:
 
     money = browser.find_element_by_css_selector(
         "body > div:nth-child(1) > header > div > div.top_menu > form > div > ul.information > li > a:nth-child(2) > strong")
-    sendTelegram(conn, "lotto money::"+str(money.text))
     momey_int = money.text.replace("원","")
     momey_int = int(momey_int.replace(",", ""))
     if momey_int < 5000:
